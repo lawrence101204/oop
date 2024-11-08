@@ -1,117 +1,97 @@
-class Person {
-    protected String name;
-    protected String address;
 
-    
-    public Person(String name, String address) {
-        this.name = name;
-        this.address = address;
+    public class InheritanceSample {
+    public static void main(String[] args) {
+        Student student = new Student("Lawrence", "BSU", "BSIT", 2);
+
+        System.out.println("Student Details:");
+        System.out.println("Name: " + student.getName());
+        System.out.println("Address: " + student.getAddress());
+        System.out.println("Program: " + student.getProgram());
+        System.out.println("Year: " + student.getYear());
+
+        Staff staff = new Staff("Mat", "Mason", "BSIT", 680000.0);
+
+        System.out.println("\nStaff Details:");
+        System.out.println("Name: " + staff.getName());
+        System.out.println("Address: " + staff.getAddress());
+        System.out.println("School: " + staff.getSchool());
+        System.out.println("Salary: " + staff.getSalary());
     }
+}
 
-    
+class Person {
+    protected String Name;
+    protected String Address;
+
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.Address = address;
     }
 
     public String getAddress() {
-        return address;
+        return Address;
     }
 }
 
 class Student extends Person {
-    private String program;
-    private int year;
+    private String Program;
+    private int Year;
 
-    
-    public Student(String name, String address, String program, int year) {
-        super(name, address); 
-        this.program = program;
-        this.year = year;
+    public Student(String Name, String Address, String Program, int Year) {
+        this.Name = Name;
+        this.Address = Address;
+        this.Program = Program;
+        this.Year = Year;
     }
 
-    
     public void setProgram(String program) {
-        this.program = program;
+        this.Program = program;
     }
 
     public String getProgram() {
-        return program;
+        return Program;
     }
 
     public void setYear(int year) {
-        this.year = year;
+        this.Year = year;
     }
 
     public int getYear() {
-        return year;
-    }
-
-   
-    public void displayInfo() {
-        System.out.println("---------------Configuration: <Default>---------------");
-        System.out.println("Student Name: " + name);
-        System.out.println("Student Address: " + address);
-        System.out.println("Student Program: " + program);
-        System.out.println("Student Year: " + year);
-        System.out.println("\nProcess completed.");
+        return Year;
     }
 }
 
 class Staff extends Person {
-    private String school;
-    private double salary;
+    private String School;
+    private double Salary;
 
-    
-    public Staff(String name, String address, String school, double salary) {
-        super(name, address);
-        this.school = school;
-        this.salary = salary;
+    public Staff(String Name, String Address, String School, double Salary) {
+        this.Name = Name;
+        this.Address = Address;
+        this.School = School;
+        this.Salary = Salary;
     }
 
-    
     public void setSchool(String school) {
-        this.school = school;
+        this.School = school;
     }
 
     public String getSchool() {
-        return school;
+        return School;
     }
 
     public void setSalary(double salary) {
-        this.salary = salary;
+        this.Salary = salary;
     }
 
     public double getSalary() {
-        return salary;
-    }
-
-    
-    public void displayInfo() {
-        System.out.println("---------------Configuration: <Default>---------------");
-        System.out.println("Staff Name: " + name);
-        System.out.println("Staff Address: " + address);
-        System.out.println("Staff School: " + school);
-        System.out.println("Staff Salary: " + salary);
-        System.out.println("\nProcess completed.");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-       
-        Student student = new Student("Villalobos Lawrence C.", "Pantay, Calaca, Batangas ", "BSIT", 2);
-        student.displayInfo();
-
-     
-        Staff staff = new Staff("Mat Jannus", "Dacanlao, Calaca, Batangas", "BSIT", 3800.0);
-        staff.displayInfo();
+        return Salary;
     }
 }
