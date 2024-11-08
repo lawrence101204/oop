@@ -25,3 +25,62 @@ public class EncapsulationSample {
    
     }
 }
+
+class Student {
+    private int Student_Id;
+    private String Name;
+
+   
+    public void setId(int s_id) {
+        this.Student_Id = s_id;
+    }
+
+    public void setName(String s_name) {
+        this.Name = s_name;
+    }
+
+    
+    public int getId() {
+        return Student_Id;
+    }
+
+    public String getName() {
+        return Name;
+    }
+}
+
+class Book {
+    private int bookNumber;
+    private String title;
+    private double price;
+
+    
+    public void setBookNumber(int bookNumber) {
+        this.bookNumber = bookNumber;
+    }
+
+   
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+   
+    public int getBookNumber() {
+        return bookNumber;
+    }
+
+   
+    public String getTitle() {
+        return title;
+    }
+
+    
+    public double getPrice() {
+        return price;
+    }
+}
